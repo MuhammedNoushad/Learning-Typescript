@@ -74,9 +74,87 @@
 //   model: "800",
 // };
 
-
-// // Named types 
+// // Named types
 
 // type Gender = 'male' | 'female';
-
 // let gender : Gender = 'female'
+
+// function overloading
+
+// function add(num1: string, num2: string): string;
+// function add(num1: number, num2: number): number;
+// function add(num1: any, num2: any): any {
+//   return num1 + num2;
+// }
+
+// // Generics
+
+// const add = <T>(n1: T): T => {
+//   return n1;
+// };
+
+// const addedValue = add<number>(3);
+
+// Enum
+
+//  enum Status {
+//     SUCCESS,
+//     FAILED,
+//     PENDING,
+//  }
+
+// keyof typeof
+
+// const Status = {
+//   SUCCESS: "success",
+//   FAILED: "failed",
+//   PENDING: "pending",
+// } as const;
+
+// function getOrder(orderId: number, status: keyof typeof Status): void {
+//   console.log(orderId, "==", status);
+// }
+
+// Utility types
+
+type Users = {
+  name: string;
+  age: number;
+  salary: number;
+};
+
+// readonly
+
+// const userData : Readonly<Users> = {
+//     name : 'muhammed',
+//     age : 20,
+//     salary : 20000,
+// };
+
+// partial
+
+// const userData : Partial<Users> = {
+//     name : 'muhammed',
+//     age : 20,
+// };
+
+// required
+
+// const userData : Required <Users> ={
+//     name:'muhammed',
+//     age:20,
+//     salary:24_44
+// }
+
+// pick
+
+// const userData: Pick<Users, "age"> = {
+//   age: 20,
+// };
+
+// omit
+
+// const userData: Omit<Users, "age"> = {
+//   name: "muhammed",
+//   salary: 23_999,
+// };
